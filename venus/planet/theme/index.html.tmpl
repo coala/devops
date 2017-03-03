@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+	<meta charset=utf-8>
+	<meta http-equiv=refresh content=600>
+	<title><TMPL_VAR name></title>
+	<link rel=alternate type=application/atom+xml href=/atom.xml title=Feed>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-grid.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+</head>
+<body>
+	<div class="container main-content">
+		<div class="row main-heading-row">
+			<div class="col-md-6 col-xs-12">
+				<center>
+				<img class="logo" src="https://api.coala.io/en/latest/_static/images/coala_logo.svg">
+				</center>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="title flow-text">coala</div>
+				<div class="description flow-text">Welcome to The coala Blog!</div>
+			</div>
+		</div>
+	</div>
+	<br><br>
+	<div class="container content-container main-content">
+
+		<ul>
+			<TMPL_LOOP Items>
+			<TMPL_IF new_date>
+		</ul>
+		<h5 class=date><TMPL_VAR new_date></h5>
+		<ul>
+		</TMPL_IF>
+			<li<TMPL_IF channel_language> lang="<TMPL_VAR channel_language>"</TMPL_IF>>
+			<a class="author chip" href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">"><TMPL_VAR channel_name ESCAPE="HTML"></a><TMPL_IF title> <a<TMPL_IF link> href="<TMPL_VAR link ESCAPE="HTML">"</TMPL_IF><TMPL_IF title_language> lang="<TMPL_VAR title_language>"</TMPL_IF>><h3><TMPL_VAR title></h3></a></TMPL_IF>
+			<TMPL_IF content><div class="content"><TMPL_VAR content></div></TMPL_IF>
+		</li>
+		<hr class="end-of-article">
+		</TMPL_LOOP>
+		</ul>
+</div>
+
+<div id=footer>
+	<p>via these fine people and places:</p>
+	<ul class="simple horizontal">
+		<TMPL_LOOP Channels>
+		<li><a href="<TMPL_VAR link ESCAPE="HTML">" title="<TMPL_VAR title ESCAPE="HTML">"><TMPL_VAR name></a></li>
+		</TMPL_LOOP>
+	</ul>
+</div>
+</body>
+</html>

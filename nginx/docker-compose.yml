@@ -1,0 +1,16 @@
+version: '2'
+services:
+  web:
+    image: nginx
+    restart: always
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx.conf.d:/etc/nginx/conf.d:ro
+      - ./root:/var/www:ro
+    ports:
+      - 80:80
+    networks:
+      - outside
+networks:
+  outside:
+    external: true
