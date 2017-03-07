@@ -7,4 +7,4 @@ services:
       - 64738:64738
       - 64738:64738/udp
     volumes:
-      - ./welcome.txt:/data/welcome.txt:ro
+      - ./welcome.txt:/data/welcome.txt
