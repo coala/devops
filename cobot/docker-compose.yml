@@ -4,7 +4,7 @@ services:
     build: .
     restart: always
     ports:
-     - "8080:8080"
+      - "8080:8080"
     env_file: .secrets
     environment:
-     - BOT_NAME=cobot
+      - BOT_NAME=cobot
