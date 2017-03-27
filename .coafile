@@ -1,0 +1,19 @@
+[git]
+bears = GitCommitBear
+
+[all]
+ignore = cobot/git
+bears = SpaceConsistencyBear
+use_spaces = True
+indent_size = 2
+
+[all.yaml]
+files = **.yml
+bears = YAMLLintBear
+
+[all.dockerfile]
+files = **/Dockerfile
+bears = DockerfileLintBear
+
+[all.ini]
+files = **.ini
