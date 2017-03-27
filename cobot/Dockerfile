@@ -1,6 +1,9 @@
 FROM node:slim
 MAINTAINER Kaisar Arkhan (Yuki) <ykno@protonmail.com>
 
+LABEL name="cobot"
+LABEL version="0.1"
+
 EXPOSE 8080
 
 RUN mkdir /hubot
