@@ -12,7 +12,7 @@ WORKDIR /hubot
 COPY git /hubot
 
 RUN npm install && \
-    npm install hubot-gitter2 && \
+    npm install hubot-gitter2-patched && \
     npm cache clean
 
 CMD ["sh", "-c", "./bin/hubot -a gitter2 --name $BOT_NAME"]
