@@ -41,8 +41,7 @@ app.controller('subdomains', ['$scope', function ($scope) {
       "image" : "a2.png",
       "card_type" : "fab",
       "icon" : "web",
-      "link" : "http://webservices.coala.io",
-      "status" : $scope.pinger("http://webservices.coala.io")
+      "link" : "http://webservices.coala.io"
     },
     {
       "name" : "Blog",
