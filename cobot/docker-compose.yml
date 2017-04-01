@@ -8,3 +8,8 @@ services:
     env_file: .secrets
     environment:
       - BOT_NAME=cobot
+      - REDIS_URL=redis://redis:6379/cobot
+    links:
+      - redis
+  redis:
+    image: redis
