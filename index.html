@@ -1,1 +1,87 @@
-<!-- Do cool stuff here -->
+<html>
+  <head>
+    <title>coala DevOps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,700,900" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-sanitize.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/ringtail/angular-ping/master/dist/angular-ping.min.js"></script>
+    <script src="https://cdn.rawgit.com/AntonAI/Angular.js-Ping-Service/master/pingService.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js" type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+  <body ng-app="coala" ng-controller="subdomains">
+    <main>
+      <div class="container mp">
+        <div class="row">
+          <div class="col s6"></div>
+          <div class="col s6">
+            <div class="title">coala</div>
+            <div class="devops-subtitle"><span class="dev-text">dev</span><span class="ops-text">ops</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <img src="images/nn.svg"/>
+      </div>
+      <div class="section container subdomains-container">
+        <div ng-repeat="sb in subdomains">
+          <div ng-if="sb.card_type=='reveal'" class="card showcase-card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" ng-src="images/{{sb.image}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">{{sb.name}}<i class="material-icons right">more_vert</i></span>
+              <p>{{sb.desc}}</p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{sb.name}}<i class="material-icons right">close</i></span>
+              <p>{{sb.reveal_text}}</p>
+            </div>
+          </div>
+          <div ng-if="sb.card_type=='fab'" class="card showcase-card">
+            <div class="card-image">
+              <img ng-src="images/{{sb.image}}">
+              <a ng-href="{{sb.link}}" class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons" ng-bind-html="sb.icon"></i></a>
+            </div>
+            <div class="card-content">
+              <span class="card-title">{{sb.name}}</span>
+              <p>{{sb.desc}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container center">
+          <div class="row">
+            <div class="col s6 center">
+              <a href="https://github.com/coala/devops" class="coala-devops-link-div">
+              <i class="fa fa-github-alt" aria-hidden="true"></i>
+              <span class="coala-devops-link">
+              coala/devops</span>
+              </a>
+            </div>
+            <!-- Link to coala status page -->
+            <!-- As getting status of each link with ping plugins
+            was not working due to the CORS issue -->
+            <div class="col s6">
+              <a href="https://status.coala.io" class="coala-devops-link-div">
+              <i class="fa fa-rocket" aria-hidden="true"></i>
+              <span class="coala-devops-link">
+              View Status</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
