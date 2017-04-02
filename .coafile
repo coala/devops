@@ -1,6 +1,3 @@
-[git]
-bears = GitCommitBear
-
 [all]
 ignore = cobot/git
 bears = SpaceConsistencyBear
