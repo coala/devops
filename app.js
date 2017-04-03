@@ -50,6 +50,15 @@ app.controller('subdomains', ['$scope', function ($scope) {
       "card_type" : "fab",
       "icon" : "forum",
       "link" : "http://blog.coala.io"
+    },
+    {
+      "name" : "Mailman",
+      "desc" : "The mailing list Manager for coala",
+      "image" : "a4.png",
+      "card_type" : "reveal",
+      "reveal_text" : "GNU Mailman is a computer software application from the \
+       GNU Project for managing electronic mailing lists.",
+      "icon" : "mail"
     }
   ];
 
