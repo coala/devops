@@ -5,7 +5,7 @@ services:
     restart: always
     hostname: list.coala.io
     ports:
-      - 0.0.0.0:25:25
+      - "25:25"
     env_file: .secrets
     environment:
       - URL_FQDN=list.coala.io
