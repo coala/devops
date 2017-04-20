@@ -1,12 +1,11 @@
 version: '2'
 services:
   web:
-    image: yukiisbored/planet-venus
+    build: .
     restart: always
     volumes:
       - ./planet/planet.ini:/planet/planet.ini:ro
       - ./planet/theme:/planet/theme
-      - ./crontab:/etc/crontab
     networks:
       - outside
 networks:
