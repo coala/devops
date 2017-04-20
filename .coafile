@@ -10,7 +10,6 @@ bears = YAMLLintBear
 
 [all.dockerfile]
 files = **/Dockerfile
-bears = DockerfileLintBear
 
 [all.ini]
 files = **.ini
