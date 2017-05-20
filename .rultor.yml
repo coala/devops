@@ -1,3 +1,11 @@
+decrypt:
+  magic_key: "repo/.ci/magic_key.asc"
 merge:
   fast-forward: only
   script: echo "Nothing to do."
+deploy:
+  script:
+    - eval "$(ssh-agent -s)"
+    - chmod 600 ../magic_key
+    - ssh-add ../magic_key
+    - ssh rultor@solar.coala.io "bash -s" < ./repo/.ci/deploy.sh
