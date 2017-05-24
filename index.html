@@ -32,54 +32,55 @@
         <img src="images/nn.svg"/>
       </div>
       <div class="section container subdomains-container">
-        <div ng-repeat="sb in subdomains">
-          <div ng-if="sb.card_type=='reveal'" class="card showcase-card">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" ng-src="images/{{sb.image}}">
+        <div class="parent">
+          <div class="child" ng-repeat="sb in subdomains">
+            <div ng-if="sb.card_type=='reveal'" class="card showcase-card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" ng-src="images/{{sb.image}}">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">{{sb.name}}<i class="material-icons right">more_vert</i></span>
+                <p>{{sb.desc}}</p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">{{sb.name}}<i class="material-icons right">close</i></span>
+                <p>{{sb.reveal_text}}</p>
+              </div>
             </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">{{sb.name}}<i class="material-icons right">more_vert</i></span>
-              <p>{{sb.desc}}</p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">{{sb.name}}<i class="material-icons right">close</i></span>
-              <p>{{sb.reveal_text}}</p>
-            </div>
-          </div>
-          <div ng-if="sb.card_type=='fab'" class="card showcase-card">
-            <div class="card-image">
-              <img ng-src="images/{{sb.image}}">
-              <a ng-href="{{sb.link}}" class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons" ng-bind-html="sb.icon"></i></a>
-            </div>
-            <div class="card-content">
-              <span class="card-title">{{sb.name}}</span>
-              <p>{{sb.desc}}</p>
+            <div ng-if="sb.card_type=='fab'" class="card showcase-card">
+              <div class="card-image">
+                <img ng-src="images/{{sb.image}}">
+                <a ng-href="{{sb.link}}" class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons" ng-bind-html="sb.icon"></i></a>
+              </div>
+              <div class="card-content">
+                <span class="card-title">{{sb.name}}</span>
+                <p>{{sb.desc}}</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </main>
-    <footer class="page-footer">
-      <div class="footer-copyright">
-        <div class="container center">
-          <div class="row">
-            <div class="col s6 center">
-              <a href="https://github.com/coala/devops" class="coala-devops-link-div">
-              <i class="fa fa-github-alt" aria-hidden="true"></i>
-              <span class="coala-devops-link">
-              coala/devops</span>
-              </a>
-            </div>
-            <!-- Link to coala status page -->
-            <!-- As getting status of each link with ping plugins
-            was not working due to the CORS issue -->
-            <div class="col s6">
-              <a href="https://status.coala.io" class="coala-devops-link-div">
-              <i class="fa fa-rocket" aria-hidden="true"></i>
-              <span class="coala-devops-link">
-              View Status</span>
-              </a>
-            </div>
+
+    <footer class="page-footer footer-copyright blue-grey darken-4">
+      <div class="container center">
+        <div class="row">
+          <div class="col s6 center">
+            <a href="https://github.com/coala/devops" class="stamp">
+            <i class="fa fa-github-alt" aria-hidden="true"></i>
+            <span class="light">
+            coala/devops</span>
+            </a>
+          </div>
+          <!-- Link to coala status page -->
+          <!-- As getting status of each link with ping plugins
+          was not working due to the CORS issue -->
+          <div class="col s6">
+            <a href="https://status.coala.io" class="stamp">
+            <i class="fa fa-rocket" aria-hidden="true"></i>
+            <span class="light">
+            View Status</span>
+            </a>
           </div>
         </div>
       </div>
