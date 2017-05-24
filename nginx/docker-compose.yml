@@ -6,8 +6,10 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx.conf.d:/etc/nginx/conf.d:ro
+      - /etc/ssl/private/coala.io:/etc/ssl/private/coala.io:ro
     ports:
       - 80:80
+      - 443:443
     networks:
       - outside
 networks:
