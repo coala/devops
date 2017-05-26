@@ -13,3 +13,8 @@ files = **/Dockerfile
 
 [all.ini]
 files = **.ini
+
+[all.sh]
+files = **.sh
+bears = ShellCheckBear
+shell = bash
