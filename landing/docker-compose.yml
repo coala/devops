@@ -1,7 +1,7 @@
 version: '2'
 services:
   web:
-    image: registry.gitlab.com/coala/landing
+    build: .
     restart: always
     expose:
       - 8000
