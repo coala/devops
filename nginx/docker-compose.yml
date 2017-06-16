@@ -1,11 +1,9 @@
 version: '2'
 services:
   web:
-    image: nginx
+    build: .
     restart: always
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./nginx.conf.d:/etc/nginx/conf.d:ro
       - /etc/ssl/private/coala.io:/etc/ssl/private/coala.io:ro
     ports:
       - 80:80
