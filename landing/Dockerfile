@@ -9,7 +9,7 @@ RUN groupadd -r $USER && \
 
 RUN zypper --no-gpg-checks --non-interactive install cron cronie
 
-RUN chown $USER:$USER $ROOT/db.sqlite3
+RUN chown $USER:$USER -R $ROOT
 
 RUN pip install gevent
 
