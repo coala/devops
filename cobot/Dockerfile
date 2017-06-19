@@ -1,4 +1,4 @@
-FROM node:slim
+FROM node:8.1-slim
 MAINTAINER Kaisar Arkhan (Yuki) <ykno@protonmail.com>
 
 LABEL name="cobot"

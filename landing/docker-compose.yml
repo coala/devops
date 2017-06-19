@@ -7,7 +7,7 @@ services:
       - 8000
     env_file: .secrets
   lb:
-    image: dockercloud/haproxy
+    image: dockercloud/haproxy:1.6.7
     restart: always
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
