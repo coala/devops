@@ -13,7 +13,7 @@ COPY git /hubot
 
 RUN npm install && \
     npm install hubot-gitter2-patched && \
-    npm cache clean
+    npm cache --force clean
 
 ENV USER=hubot ROOT=/hubot
 
