@@ -3,9 +3,6 @@ services:
   web:
     build: .
     restart: always
-    volumes:
-      - ./planet/planet.ini:/planet/planet.ini:ro
-      - ./planet/theme:/planet/theme
     networks:
       - outside
 networks:

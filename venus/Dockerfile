@@ -1,5 +1,8 @@
-FROM yukiisbored/planet-venus
+FROM yukiisbored/planet-venus:1
+
+ENV PLANET_DIRECTORY=/planet-coala \
+    PLANET_CONFIG_FILE=/planet-coala/planet.ini \
+    PLANET_OUTPUT=/planet-coala/output
 
 COPY crontab /etc/crontab
-RUN chmod 644 /etc/crontab && \
-    chown 0:0 /etc/crontab
+COPY planet $PLANET_DIRECTORY
