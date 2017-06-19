@@ -1,0 +1,6 @@
+version: '2'
+services:
+  corobo:
+    image: coala/corobo
+    restart: always
+    env_file: .secrets
