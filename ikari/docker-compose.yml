@@ -1,0 +1,41 @@
+version: '3'
+services:
+  node-exporter:
+    image: prom/node-exporter:v0.14.0
+    restart: always
+    volumes:
+      - /proc:/host/proc
+      - /sys:/host/sys
+      - /:/rootfs
+    command:
+      - '-collector.procfs=/host/proc'
+      - '-collector.sysfs=/host/sysfs'
+      - '-collector.filesystem.ignored-mount-points="^/(sys|proc|dev|host|etc)($$|/)"'
+  prometheus:
+    build: prometheus
+    restart: always
+    volumes:
+      - prometheus-data:/prometheus
+    links:
+      - node-exporter
+  grafana:
+    image: grafana/grafana:4.3.2
+    restart: always
+    env_file: .secrets/grafana.env
+    volumes:
+      - grafana-data:/var/lib/grafana
+    environment:
+      - GF_SERVER_DOMAIN=solar.coala.io
+      - GF_SERVER_ROOT_URL=https://solar.coala.io/grafana/
+      - GF_INSTALl_PLUGINS=raintank-worldping-app,cloudflare-app
+    links:
+      - prometheus
+    networks:
+      - outside
+      - default
+volumes:
+  grafana-data:
+  prometheus-data: 
+networks:
+  outside:
+    external: true 

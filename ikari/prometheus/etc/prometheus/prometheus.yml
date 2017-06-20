@@ -1,0 +1,12 @@
+global:
+  scrape_interval: 15s 
+  evaluation_interval: 15s
+  external_labels:
+      monitor: 'solar-monitor'
+
+rule_files:
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090', 'node-exporter:9100']
