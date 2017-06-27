@@ -35,7 +35,7 @@ services:
       - default
 volumes:
   grafana-data:
-  prometheus-data: 
+  prometheus-data:
 networks:
   outside:
-    external: true 
+    external: true
