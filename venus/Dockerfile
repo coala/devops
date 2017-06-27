@@ -6,3 +6,5 @@ ENV PLANET_DIRECTORY=/planet-coala \
 
 COPY crontab /etc/crontab
 COPY planet $PLANET_DIRECTORY
+
+RUN chmod 600 /etc/crontab
