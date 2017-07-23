@@ -4,3 +4,10 @@ services:
     image: meetmangukiya/corobo
     restart: always
     env_file: .secrets
+    links:
+      - answers
+    environment:
+      - ANSWER_END=http://answers:8000
+  answers:
+    image: meetmangukiya/corobo-answers
+    restart: always
