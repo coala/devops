@@ -1,2 +1,3 @@
 .secrets
 *.tmplc
+rultor_github_secrets.sh
