@@ -1,7 +1,0 @@
-<br>
-Welcome to mumble.coala.io!<br>
-<ul>
-  <li><b>Please join the appropiate channel</b></li>
-  <li>Don't forget to reserve your username by registering!</li>
-</ul>
-<b>Enjoy your stay!</b>
