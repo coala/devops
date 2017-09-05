@@ -1,6 +1,0 @@
-version: '2'
-services:
-  cherry-pick-bot:
-    image: adtac/cherry-pick-bot
-    restart: always
-    env_file: .secrets
