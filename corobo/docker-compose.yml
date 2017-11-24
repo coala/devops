@@ -8,6 +8,8 @@ services:
       - answers
     environment:
       - ANSWER_END=http://answers:8000
+      - BACKEND=Gitter
+      - BOT_ADMINS=meetmangukiya
   answers:
     image: meetmangukiya/corobo-answers
     restart: always
