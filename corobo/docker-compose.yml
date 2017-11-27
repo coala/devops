@@ -15,6 +15,16 @@ services:
       - GH_ORG_NAME=coala
       - GL_ORG_NAME=coala
       - BOT_DEPRECATED_PREFIXES=cobot
+      - COBOT_ROOT=/opt/errbot
+      - BOT_EXTRA_BACKEND_DIR=/opt/errbot/err-backend-gitter
+      - BOT_HIDE_RESTRICTED_COMMANDS=True
+      - BOT_DATA_DIR=/opt/errbot/data
+      - BOT_EXTRA_PLUGIN_DIR=/opt/errbot
+      - BOT_LOG_FILE=/opt/errbot/errbot.log
+      - BOT_LOG_LEVEL=DEBUG
+      - BOT_DIVERT_TO_PRIVATE=help
+      - BOT_AUTOINSTALL_DEPS=True
+      - ROOMS=coala/coala coala/coala/offtopic coala/cobot-test coala/devops coala/community coala/coala/gsoc coala/coala/maintainers coala/coala-bears coala/bearship coala/gci coala/cobot coala/corobo
   answers:
     image: meetmangukiya/corobo-answers
     restart: always
