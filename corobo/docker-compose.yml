@@ -10,6 +10,10 @@ services:
       - ANSWER_END=http://answers:8000
       - BACKEND=Gitter
       - BOT_ADMINS=meetmangukiya
+      - COBOT_PREFIX=corobo
+      - IGNORE_USERNAMES=coala-bot co-robo
+      - GH_ORG_NAME=coala
+      - GL_ORG_NAME=coala
   answers:
     image: meetmangukiya/corobo-answers
     restart: always
