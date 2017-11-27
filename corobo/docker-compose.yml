@@ -14,6 +14,7 @@ services:
       - IGNORE_USERNAMES=coala-bot co-robo
       - GH_ORG_NAME=coala
       - GL_ORG_NAME=coala
+      - BOT_DEPRECATED_PREFIXES=cobot
   answers:
     image: meetmangukiya/corobo-answers
     restart: always
