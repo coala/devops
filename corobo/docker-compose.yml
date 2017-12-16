@@ -11,7 +11,6 @@ services:
       - BACKEND=Gitter
       - BOT_ADMINS=meetmangukiya
       - COBOT_PREFIX=corobo
-      - IGNORE_USERNAMES=coala-bot co-robo
       - GH_ORG_NAME=coala
       - GL_ORG_NAME=coala
       - BOT_DEPRECATED_PREFIXES=cobot
