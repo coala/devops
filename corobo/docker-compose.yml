@@ -23,7 +23,11 @@ services:
       - BOT_LOG_LEVEL=DEBUG
       - BOT_DIVERT_TO_PRIVATE=help
       - BOT_AUTOINSTALL_DEPS=True
-      - ROOMS=coala/coala coala/coala/offtopic coala/cobot-test coala/devops coala/community coala/coala/gsoc coala/coala/maintainers coala/coala-bears coala/bearship coala/gci coala/cobot coala/corobo
+      - >
+        ROOMS=coala/coala coala/coala/offtopic coala/cobot-test coala/devops
+              coala/community coala/coala/gsoc coala/coala/maintainers
+              coala/coala-bears coala/bearship coala/gci coala/cobot
+              coala/corobo
   answers:
     image: meetmangukiya/corobo-answers
     restart: always
