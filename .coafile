@@ -13,3 +13,7 @@ files = **/Dockerfile
 
 [all.ini]
 files = **.ini
+
+[all.jinja2]
+bears = Jinja2Bear
+files = **.jj2

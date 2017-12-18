@@ -1,0 +1,62 @@
+{% macro api_doc(doc) -%}
+  api.coala.io/en/latest/{{ doc }}.html
+{%- endmacro %}
+
+{% macro user_doc(doc) -%}
+  docs.coala.io/en/latest/{{ doc }}.html
+{%- endmacro %}
+
+{% macro github_file(org, repo, file, branch="master") -%}
+  github.com/{{ org }}/{{ repo }}/blob/{{ branch }}/{{ file }}
+{%- endmacro %}
+
+{% macro cEP(n) -%}
+  {{ github_file("coala", "cEPs", "cEP-%04d.md" % n) }}
+{%- endmacro %}
+
+{% macro gform(id) -%}
+  docs.google.com/forms/d/e/{{ id }}/viewform
+{%- endmacro %}
+
+{% macro gpresentation(id) -%}
+  docs.google.com/presentation/d/{{ id }}/edit
+{%- endmacro %}
+
+{% macro github_issues(q) -%}
+  github.com/issues?q={{ q | urlencode }}
+{%- endmacro %}
+
+{% macro github_pulls(q) -%}
+  github.com/pulls?q={{ q | urlencode }}
+{%- endmacro %}
+
+{% macro github_wiki(org, repo, page) -%}
+  github.com/{{ org }}/{{ repo }}/wiki/{{ page }}
+{%- endmacro %}
+
+{% macro wiki(page) -%}
+  {{ github_wiki("coala", "repo", page) }}
+{%- endmacro %}
+
+{% macro get_url(sl) %}
+  {# Ignore Jinja2Bear - false alarm #}
+  {% if sl.api_doc is defined -%}
+    {{ api_doc(sl.api_doc) }}
+  {%- elif sl.user_doc is defined -%}
+    {{ user_doc(sl.user_doc) }}
+  {%- elif sl.cEP is defined -%}
+    {{ cEP(sl.cEP) }}
+  {%- elif sl.gform is defined -%}
+    {{ gform(sl.gform) }}
+  {%- elif sl.gpresentation is defined -%}
+    {{ gpresentation(sl.gpresentation) }}
+  {%- elif sl.github_issues is defined -%}
+    {{ github_issues(sl.github_issues) }}
+  {%- elif sl.github_pulls is defined -%}
+    {{ github_pulls(sl.github_pulls) }}
+  {%- elif sl.wiki is defined -%}
+    {{ wiki(sl.wiki) }}
+  {%- else -%}
+    {{ sl.url }}
+  {%- endif %}
+{% endmacro %}

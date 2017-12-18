@@ -1,0 +1,116 @@
+shortlinks:
+  - name: newcomer
+    api_doc: Developers/Newcomers_Guide
+  - name: newcomers
+    api_doc: Developers/Newcomers_Guide
+  - name: new
+    github_issues: "is:open is:issue user:coala label:difficulty/newcomer\
+                    -label:initiatives/gci no:assignee"
+  - name: low
+    github_issues: "is:open is:issue user:coala label:difficulty/low \
+                    no:assignee"
+  - name: medium
+    github_issues: "is:open is:issue user:coala label:difficulty/medium \
+                  no:assignee"
+  - name: review
+    github_pulls: "is:open user:coala label:process/pending review \
+                   sort:created-asc"
+  - name: greview
+    url: gitlab.com/groups/coala/merge_requests
+  - name: approved
+    github_pulls: "is:open user:coala label:process/approved \
+                   sort:created-asc"
+  - name: reviewing
+    api_doc: Developers/Review
+  - name: languages
+    url: coala.io/#!/languages
+  - name: chat
+    url: gitter.im/coala-analyzer/coala
+  - name: git
+    api_doc: Developers/Git_Basics
+  - name: rebase
+    url: coala.io/git#rebasing
+  - name: commit
+    api_doc: Developers/Writing_Good_Commits
+  - name: cep
+    cEP: 0
+  - name: cep1
+    cEP: 1
+  - name: cep2
+    cEP: 2
+  - name: cep3
+    cEP: 3
+  - name: cep5
+    cEP: 5
+  - name: cep6
+    cEP: 6
+  - name: cep9
+    cEP: 9
+  - name: cep10
+    cEP: 10
+  - name: cep12
+    cEP: 12
+  - name: cep14
+    cEP: 14
+  - name: coc
+    cEP: 6
+  - name: tutorial
+    user_doc: Users/Tutorial
+  - name: writingbears
+    api_doc: Developers/Writing_Native_Bears
+  - name: channels
+    wiki: Communication-Channels
+  - name: newform
+    gform: 1FAIpQLSd7g_MU_c-BMQ62WHeznrvcoXwqW87O_Wq4Gz7-pp8PJ38Wdg
+  - name: projects
+    wiki: Project-Ideas
+  - name: reviewsprint
+    gform: 1FAIpQLSd4vHafTyY4RW--fOyIVecBM0WKNEeF-RyFvUn83jCF9ou2tg
+  - name: reply
+    wiki: Reply-Templates
+  - name: linespots
+    url: gitlab.com/sims1253/Linespots
+  - name: usability
+    gform: 1FAIpQLSe9lZxuYEKlvxXzQUOTwrre3CQMNsks7eOzEl49_2q5vlDl0w
+  - name: starwars
+    url: www.youtube.com/watch?v=JWVCMjKU_10
+  - name: docs
+    url: docs.coala.io
+  - name: api
+    url: api.coala.io
+  - name: viperform
+    gform: 1FAIpQLSdtdIF5CLnO2erAc41yLRoEvUMXyt3ZWUOVJ5LSqpwZEYF03A
+  - name: romania
+    url: "www.bigmarker.com/remote-meetup/Open-Source-and-Google-Summer-of-Code\
+          -8-Gorgeous-Short-Presentations"
+  - name: thesis
+    wiki: Writing-a-Thesis-with-coala
+  - name: install
+    user_doc: Users/Install
+  - name: comania
+    wiki: Hackathon-comania
+  - name: pizza
+    gform: 1FAIpQLSdt_zc_bgAE6vqTypSBnWk240AEnhCE7NBmpU1nLnFBuaivqA
+  - name: help
+    api_doc: Developers/coala_settings
+  - name: devsetup
+    api_doc: Developers/Development_Setup
+  - name: community_issues
+    github_pulls: "is:open user:coala label:community_team sort:created-asc"
+  - name: fosdem2017
+    url: "http://coala.us15.list-manage1.com/subscribe?u=f37f470f0755466918fbde\
+          30b&id=71567f2923"
+  - name: gitmate
+    url: coala.io/#/gitmate
+  - name: csoc
+    gform: 1FAIpQLSeR8WKkZA1R0gBDjJqfeI96jgHe9mt8zmAVm1YtB5FpJFD9gQ
+  - name: recipes
+    url: github.com/coala/recipes
+  - name: autocontrib
+    gpresentation: 1fYx1aiSSj_w1vw017tBYfSGbfgl38sMWg3qlhvimYu8
+  - name: exterminate
+    url: github.com/adtac/exterminate
+  - name: exterminatep
+    gpresentation: 1qJpXMgA8_WJNO3eUV_ueNiU8w_1fTethNvEuU2XHnWs
+  - name: feedback
+    gform: 1FAIpQLSePFIE5-Mfk-ER307rdcAmBHZpKNRgOSeq-rmjY-09pEn3TsA

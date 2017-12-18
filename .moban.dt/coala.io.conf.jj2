@@ -1,0 +1,20 @@
+{% from "url_builder.jj2" import get_url %}
+server {
+    listen 443 ssl;
+    server_name coala.io www.coala.io;
+
+    location / {
+        proxy_pass             http://192.30.252.153;
+        proxy_set_header       Host coala.io;
+        proxy_set_header       X-Real-IP $remote_addr;
+        proxy_intercept_errors on;
+    }
+
+    location /links {
+        root /usr/share/nginx/html;
+    }
+
+    {% for sl in shortlinks %}
+    location /{{ "%-10s" % sl.name }} { return 301 https://{{ get_url(sl) }}; }
+    {% endfor %}{# for sl in shortlinks #}
+}

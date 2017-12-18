@@ -1,0 +1,35 @@
+{% from "url_builder.jj2" import get_url %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>coala Shortlinks</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="coala Shortlinks">
+        <meta property="og:description" content="List of shortlinks used under coala.io">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div>
+            <a href="https://coala.io">
+                <img class="logo" src="https://api.coala.io/en/latest/_static/images/coala_logo.svg" alt="coala">
+            </a>
+            <h1>coala Shortlinks</h1>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>Shortlink</th>
+                    <th>Target</th>
+                </tr>
+                {% for sl in shortlinks %}
+                <tr>
+                    <td><a href="https://coala.io/{{ sl.name }}">{{ sl.name }}</a></td>
+                    <td><a href="https://{{ get_url(sl) }}">{{ get_url(sl) }}</a></td>
+                </tr>
+                {% endfor %}{# for sl in shortlinks #}
+            </ul>
+        </div>
+    </body>
+</html>

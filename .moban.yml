@@ -1,0 +1,9 @@
+configuration:
+  template_dir:
+    - .moban.dt/
+    - ../coala-mobans/templates/
+  configuration: devops.yml
+  configuration_dir: ../coala-mobans/
+targets:
+  - nginx/nginx.conf.d/coala.io.conf: coala.io.conf.jj2
+  - nginx/webroot/links/index.html: links.html.jj2
