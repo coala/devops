@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap-grid.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.4"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
 </head>
@@ -54,6 +55,10 @@
 		<li><a href="<TMPL_VAR link ESCAPE="HTML">" title="<TMPL_VAR title ESCAPE="HTML">"><TMPL_VAR name></a></li>
 		</TMPL_LOOP>
 	</ul>
+	<p>This site features "Emoji" from <a href="http://twitter.github.io/twemoji/">Twem❤ji</a> by Twitter is licensed under CC-BY 4.0</p>
 </div>
+<script>
+twemoji.parse(document.body);
+</script>
 </body>
 </html>
