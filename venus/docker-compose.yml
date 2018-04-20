@@ -3,8 +3,17 @@ services:
   web:
     build: .
     restart: always
-    networks:
-      - outside
+    labels:
+      - 'traefik.backend=venus'
+      - 'traefik.docker.network=outside'
+      - 'traefik.frontend.rule=Host:blog.coala.io'
+      - 'traefik.frontend.headers.STSSeconds=315569260'
+      - 'traefik.frontend.headers.STSPreload=true'
+      - 'traefik.frontend.headers.frameDeny=true'
+      - 'traefik.frontend.headers.browserXSSFilter=true'
+      - 'traefik.port=80'
+      - 'traefik.enable=true'
 networks:
-  outside:
-    external: true
+  default:
+    external:
+      name: outside
