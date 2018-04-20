@@ -7,8 +7,6 @@ RUN groupadd -r $USER && \
     useradd -r -m --home-dir=$ROOT -s /usr/sbin/nologin \
     -g $USER $USER
 
-RUN zypper --no-gpg-checks --non-interactive install cron cronie
-
 RUN chown $USER:$USER -R $ROOT
 
 RUN pip install gevent
