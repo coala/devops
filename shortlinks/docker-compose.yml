@@ -1,0 +1,19 @@
+version: '2'
+services:
+  web:
+    build: .
+    restart: always
+    labels:
+      - 'traefik.backend=shortlinks'
+      - 'traefik.docker.network=outside'
+      - 'traefik.frontend.rule=Host:coala.io'
+      - 'traefik.frontend.headers.STSSeconds=315569260'
+      - 'traefik.frontend.headers.STSPreload=true'
+      - 'traefik.frontend.headers.frameDeny=true'
+      - 'traefik.frontend.headers.browserXSSFilter=true'
+      - 'traefik.port=80'
+      - 'traefik.enable=true'
+networks:
+  default:
+    external:
+      name: outside

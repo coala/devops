@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  traefik:
+    container_name: traefik
+    build: .
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - acme_storage:/etc/traefik/acme
+    env_file: .secrets
+    ports:
+      - 80:80
+      - 443:443
+
+networks:
+  default:
+    external:
+      name: outside
+
+volumes:
+  acme_storage: {}
