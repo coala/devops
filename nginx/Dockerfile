@@ -1,5 +1,5 @@
 FROM nginx:1.13
-MAINTAINER Muhammad Kaisar Arkhan <yukinagato@protonmail.com>
+LABEL MAINTAINER="yuki@coala.io"
 
 ADD nginx.conf /etc/nginx/nginx.conf
 ADD nginx.conf.d /etc/nginx/conf.d
